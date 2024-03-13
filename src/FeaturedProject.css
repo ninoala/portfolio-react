@@ -1,0 +1,33 @@
+.featured-project {
+    display: block;
+    width: 400px;
+    height: 300px;
+    text-decoration: none;
+    color: inherit; /* Keep text color consistent */
+    border: 1px solid #ddd; /* Add a light border */
+    border-radius: 8px; /* Optional: rounded corners */
+    overflow: hidden; /* Keeps child elements contained */
+    transition: box-shadow 0.3s ease;
+}
+
+.featured-project:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Add shadow on hover */
+}
+
+.project-image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* A subtle line between the image and the text */
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+.project-info p {
+    margin-bottom: 0;
+}

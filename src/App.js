@@ -6,12 +6,14 @@ import PageHome from './pages/PageHome';
 import PageWorks from './pages/PageWorks';
 import PageAbout from './pages/PageAbout';
 import PageContact from './pages/PageContact';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
     <Router>
       <div id="site-wrapper">
         <Header />
+        <Sidebar />
         <Routes>
           <Route path="/" exact element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />

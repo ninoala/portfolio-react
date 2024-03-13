@@ -1,0 +1,23 @@
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 87%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .sidebar a {
+    margin: 5px 10px 5px 0;
+    color: #000;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    color: #007ACC;;
+}
