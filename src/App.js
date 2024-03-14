@@ -7,6 +7,7 @@ import PageWorks from './pages/PageWorks';
 import PageAbout from './pages/PageAbout';
 import PageContact from './pages/PageContact';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,12 +15,15 @@ function App() {
       <div id="site-wrapper">
         <Header />
         <Sidebar />
-        <Routes>
-          <Route path="/" exact element={<PageHome />} />
-          <Route path="/about" element={<PageAbout />} />
-          <Route path="/works" element={<PageWorks />} />
-          <Route path="/contact" element={<PageContact />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" exact element={<PageHome />} />
+            <Route path="/about" element={<PageAbout />} />
+            <Route path="/works" element={<PageWorks />} />
+            <Route path="/contact" element={<PageContact />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
