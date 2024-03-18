@@ -39,6 +39,22 @@ function PageHome() {
       <section className="home-about">
         <h2>One Pixel At A Time</h2>
         <p>A self-motivated front-end developer with hands-on project experiences designing and building websites from scratch. My goal is to build websites with both visually appealing and user experience-oriented functionality. More about me here.</p>
+
+        <p>I have a strong passion for the ever-evolving landscape of web technology, which drives me to continuously learn and implement the latest trends in front-end development. My expertise lies in creating responsive, accessible, and fast-loading websites, ensuring a seamless experience across all devices and platforms. With a keen eye for design and detail, I strive to deliver projects that exceed client expectations while meeting deadlines and budget requirements. Collaboration and communication are key to my workflow, as I believe that the best results are achieved when ideas are shared and refined together.</p>
+        <div className="principles-container">
+          <figure>
+            <img src={Thumbnail} />
+            <figcaption>User-Centric Design</figcaption>
+          </figure>
+          <figure>
+            <img src={Thumbnail} />
+            <figcaption>Security</figcaption>
+          </figure>
+          <figure>
+            <img src={Thumbnail} />
+            <figcaption>Perfomance and Optimization</figcaption>
+          </figure>
+        </div>
       </section>
       <section className="featured-projects">
         <h2>Featured Projects</h2>

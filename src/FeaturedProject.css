@@ -1,7 +1,7 @@
 .featured-project {
     display: block;
-    width: 400px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     text-decoration: none;
     color: inherit; /* Keep text color consistent */
     border: 1px solid #ddd; /* Add a light border */

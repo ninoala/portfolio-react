@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 function PageContact() {
   return (
     <div id="contact">
+      <div className='flex-wrap'>
       <div className="contact-form-wrapper">
         <h1>Contact Me</h1>
         <p>I am currently seeking web development opportunities and open to full-time, part-time, contract, freelance, and internship positions.</p>
@@ -66,8 +67,11 @@ function PageContact() {
           </Marker>
       </MapContainer>
       </div>
-      <Link to="/works" className="projects-btn">View My Projects</Link>
-      <Link to="/about" className="projects-btn">About Me</Link>
+      </div>
+      <div className="contact-buttons">
+        <Link to="/works" className="contacts-btn">View My Projects</Link>
+        <Link to="/about" className="contacts-btn">About Me</Link>
+      </div>
     </div>
   )
 }
