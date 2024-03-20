@@ -6,6 +6,9 @@ import Thumbnail from '../assets/thumbnail.webp';
 import ScrollDown from '../components/ScrollDown';
 import { Link } from 'react-router-dom';
 import FeaturedProject from '../components/FeaturedProject';
+import Icon1 from "../assets/icon-1.png"
+import Icon2 from "../assets/icon-2.png"
+import Icon3 from "../assets/icon-3.png"
 
 function PageHome() {
   return (
@@ -43,15 +46,15 @@ function PageHome() {
         <p>I have a strong passion for the ever-evolving landscape of web technology, which drives me to continuously learn and implement the latest trends in front-end development. My expertise lies in creating responsive, accessible, and fast-loading websites, ensuring a seamless experience across all devices and platforms. With a keen eye for design and detail, I strive to deliver projects that exceed client expectations while meeting deadlines and budget requirements. Collaboration and communication are key to my workflow, as I believe that the best results are achieved when ideas are shared and refined together.</p>
         <div className="principles-container">
           <figure>
-            <img src={Thumbnail} />
+            <img src={Icon1} />
             <figcaption>User-Centric Design</figcaption>
           </figure>
           <figure>
-            <img src={Thumbnail} />
+            <img src={Icon2} /> 
             <figcaption>Security</figcaption>
           </figure>
           <figure>
-            <img src={Thumbnail} />
+          <img src={Icon3} /> 
             <figcaption>Perfomance and Optimization</figcaption>
           </figure>
         </div>
