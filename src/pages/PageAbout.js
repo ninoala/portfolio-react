@@ -47,7 +47,6 @@ function PageAbout() {
           <img src={psLogo} />
           <img src={aiLogo} />
           <img src={invisionLogo} />
-          <img src={canvaLogo} />
           <img src={shopifyLogo} />
           <img src={githubLogo} />
           <img src={restLogo} />

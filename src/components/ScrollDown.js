@@ -1,9 +1,8 @@
 import React from 'react'
-import '../scrolldown.css'
 
 function ScrollDown() {
   return (
-    <div class="container">
+    <div class="scroll-container">
         <div class="field">
             <div class="mouse"></div><span>Scroll</span>
         </div>

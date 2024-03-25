@@ -1,25 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, []);
+
   return (
     <nav className="nav">
-      <ul>
+      <div className="hamburger-menu" onClick={() => {
+        setMenuOpen(!menuOpen);
+      }}>
+        {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} /> }
+      </div>
+
+      <ul className={menuOpen ? '' : 'open'}>
         <li>
-          <Link to="/">&lt;HOME /&gt;</Link>
+          <NavLink to="/">&lt;HOME /&gt;</NavLink>
         </li>
         <li>
-          <Link to="/about">&lt;ABOUT /&gt;</Link>
+          <NavLink to="/about">&lt;ABOUT /&gt;</NavLink>
         </li>
         <li>
-          <Link to="/works">&lt;WORKS /&gt;</Link>
+          <NavLink to="/works">&lt;WORKS /&gt;</NavLink>
         </li>
         <li>
-          <Link to="/contact">&lt;CONTACT /&gt;</Link>
+          <NavLink to="/contact">&lt;CONTACT /&gt;</NavLink>
         </li>
       </ul>
     </nav>
   );
 }
 
-export default Nav
+export default Nav;

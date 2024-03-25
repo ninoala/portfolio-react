@@ -1,0 +1,63 @@
+@use '../base/variables' as *;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $nav-blue;
+    padding: 0 0.5rem;
+    font-weight: 600;
+
+    ul {
+        display: flex;
+        transition: transform 0.3s ease-in;
+
+        li {
+            list-style: none;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $white;
+                padding: 0.5rem;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        svg {
+            color: $orange;
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 765px) {
+        .hamburger-menu {
+            display: flex;
+            z-index: 9999;
+        }
+
+        ul {
+            position: fixed;
+            top: 0;
+            left: 100%; /* Start off-screen */
+            width: 100%;
+            height: 100%;
+            background-color: $nav-blue;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 2.5rem;
+            transform: translateX(-100%); /* Initially off-screen */
+            z-index: 9998;
+        }
+
+        ul.open {
+            display: flex;
+            transform: translateX(0); /* Slide in when open */
+        }
+    }
+}

@@ -1,0 +1,13 @@
+//base
+@use './scss/base/variables';
+
+//components
+@use './scss/components/header';
+@use './scss/components/nav';
+@use './scss/components/scrollDown';
+@use './scss/components/featured-project';
+@use './scss/components/footer';
+
+//pages
+@use './scss/pages/pageHome';
+@use './scss/pages/pageAbout';

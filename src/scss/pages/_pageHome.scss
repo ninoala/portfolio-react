@@ -1,0 +1,106 @@
+@use '../base/variables' as *;
+
+html {
+    font-family: $font-1;
+}
+
+.landing-content {
+
+    h1 {
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 2rem;
+        text-align: center;
+        color: $blue; 
+    }
+
+    p {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    figure {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 35% 40% 30% 35%;
+            border: none;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
+
+    .tech-stack {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tech-stack-icons {
+        font-size: 2.25rem;
+    }
+
+}
+
+.home-about {
+    background-color: $nav-blue;
+    margin-top: 2.5rem;
+    padding: 2rem .25rem;
+
+    h2 {
+        color: $white;
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    p {
+        margin-top: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+        color: $white;
+    }
+
+    .principles-container {
+        figure {
+            text-align: center;
+
+            img {
+                width: 200px;
+            }
+
+            figcaption {
+                color: $white;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.featured-projects {
+    
+    h2 {
+        color: $blue;
+        text-align: center;
+        padding: 0 1rem;
+        margin: 2rem 0;
+    }
+}
+
+.btn {
+    display: block;
+    width: 13.75rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #FF9500;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
