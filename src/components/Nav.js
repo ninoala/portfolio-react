@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -6,30 +6,28 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, []);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav className="nav">
-      <div className="hamburger-menu" onClick={() => {
-        setMenuOpen(!menuOpen);
-      }}>
+    <nav className="nav" onClick={toggleMenu}>
+      <div className="hamburger-menu" onClick={toggleMenu}>
         {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} /> }
       </div>
 
-      <ul className={menuOpen ? '' : 'open'}>
+      <ul className={menuOpen ? 'open' : ''}>
         <li>
-          <NavLink to="/">&lt;HOME /&gt;</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about">&lt;ABOUT /&gt;</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <NavLink to="/works">&lt;WORKS /&gt;</NavLink>
+          <NavLink to="/works">Works</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">&lt;CONTACT /&gt;</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>

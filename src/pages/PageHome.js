@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJs, faReact, faWordpressSimple, faPhp, faShopify } from '@fortawesome/free-brands-svg-icons';
 import Profile from '../assets/profile.jpg';
@@ -6,42 +6,40 @@ import Thumbnail from '../assets/thumbnail.webp';
 import ScrollDown from '../components/ScrollDown';
 import { Link } from 'react-router-dom';
 import FeaturedProject from '../components/FeaturedProject';
-import Icon1 from "../assets/icon-1.svg"
-import Icon2 from "../assets/icon-2.svg"
-import Icon3 from "../assets/icon-3.svg"
+import Icon1 from "../assets/icon-1.svg";
+import Icon2 from "../assets/icon-2.svg";
+import Icon3 from "../assets/icon-3.svg";
 
 function PageHome() {
   return (
+    <>
     <div id="home">
       <section className="landing">
         <div className="landing-content">
 
-          <h1>Front-End <br /> Web Developer</h1>
-          <p>Hi, I’m Yegor Nino, your next web dev hero,
-            based in Ottawa, ON. 
-          </p>
-
           <figure>
-            <img src={Profile} />
+            <img src={Profile} alt="Profile" />
           </figure>
 
-          <div className='tech-stack'>
-            Tech Stack | <br />
-            <div className="tech-stack-icons">
-              <FontAwesomeIcon icon={faHtml5} /> 
-              <FontAwesomeIcon icon={faCss3Alt} /> 
-              <FontAwesomeIcon icon={faJs} /> 
-              <FontAwesomeIcon icon={faReact} /> 
-              <FontAwesomeIcon icon={faWordpressSimple} /> 
-              <FontAwesomeIcon icon={faPhp} />
-              <FontAwesomeIcon icon={faShopify} />
+          <div className='landing-text'>
+            <h1>Hi, I'm Yegor Nino </h1>
+            <p>A front-end web developer based in Ottawa, ON 
+            </p>
+            <div className='tech-stack'>
+              Tech Stack | <br />
+              <div className="tech-stack-icons">
+                <FontAwesomeIcon icon={faHtml5} className='html'/> 
+                <FontAwesomeIcon icon={faCss3Alt} className='css'/> 
+                <FontAwesomeIcon icon={faJs} className='javascript'/> 
+                <FontAwesomeIcon icon={faReact} className='react'/> 
+                <FontAwesomeIcon icon={faWordpressSimple} className='wp'/> 
+                <FontAwesomeIcon icon={faPhp} className='php'/>
+                <FontAwesomeIcon icon={faShopify} className='shopify'/>
+              </div>
+              <Link to="/works" className="btn btn-warning">View My Projects</Link>
             </div>
+            <ScrollDown />
           </div>
-
-          <ScrollDown />
-
-          <Link to="/works" className="btn">View My Projects</Link>
-
         </div>
       </section>
       <section className="home-about">
@@ -51,16 +49,16 @@ function PageHome() {
         <p>I have a strong passion for the ever-evolving landscape of web technology, which drives me to continuously learn and implement the latest trends in front-end development. My expertise lies in creating responsive, accessible, and fast-loading websites, ensuring a seamless experience across all devices and platforms.</p>
         <div className="principles-container">
           <figure>
-            <img src={Icon1} />
+            <img src={Icon1} alt="User-Centric Design" />
             <figcaption>User-Centric Design</figcaption>
           </figure>
           <figure>
-            <img src={Icon2} /> 
+            <img src={Icon2} alt="Security" /> 
             <figcaption>Security</figcaption>
           </figure>
           <figure>
-          <img src={Icon3} /> 
-            <figcaption>Perfomance and Optimization</figcaption>
+            <img src={Icon3} alt="Performance and Optimization" /> 
+            <figcaption>Performance and Optimization</figcaption>
           </figure>
         </div>
       </section>
@@ -86,10 +84,11 @@ function PageHome() {
             link="/project-three"
           />
         </div>
-        <Link to="/works" className="btn">View My Projects</Link>
+        <Link to="/works" className="btn btn-warning">View All Projects</Link>
       </section>
     </div>
-  )
+    </>
+  );
 }
 
-export default PageHome
+export default PageHome;

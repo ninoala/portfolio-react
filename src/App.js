@@ -8,6 +8,7 @@ import PageContact from './pages/PageContact';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

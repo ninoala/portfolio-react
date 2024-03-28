@@ -4,103 +4,297 @@ html {
     font-family: $font-1;
 }
 
+main {
+    padding: 0;
+
+}
+
 .landing-content {
+    margin-top: 4rem;
+    height: 75vh;
+    background-color: #f7f7f7;
 
     h1 {
         font-size: 3rem;
+        font-weight: 700;
         text-align: left;
         margin-top: 2rem;
         text-align: center;
-        color: $blue; 
+        color: $nav-blue; 
     }
 
     p {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #708090;
         text-align: center;
         margin-top: 1rem;
         margin-bottom: 3rem;
         padding: 0 1rem;
     }
 
+    .btn {
+        margin-top: 2rem;
+    }
+
     figure {
+        width: 10em;
+        height: auto;
+        overflow: hidden; 
         text-align: center;
-        margin-bottom: 1rem;
+        margin: 0 auto;
 
         img {
-            width: 10rem;
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            animation: moveBorderRadius 3s infinite alternate;
             height: 10rem;
             border-radius: 35% 40% 30% 35%;
-            border: none;
+            border: solid 2px $orange;
             object-fit: cover;
             margin: 0 auto;
         }
+
+        ::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent; /* Border width and color */
+            border-radius: 0; /* Initial border radius */
+            z-index: 1; /* Ensure it's above the image */
+          }
     }
 
     .tech-stack {
         width: 100%;
         margin: 0 auto;
         text-align: center;
-    }
+        z-index: 99;
 
-    .tech-stack-icons {
-        font-size: 2.25rem;
-    }
+        .tech-stack-icons {
+            font-size: 2.25rem;
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            padding: 1rem 0;
 
+            .html {
+                color: #E34F26;
+            } 
+
+            .css {
+                color: #1572B6;
+            }
+
+            .javascript {
+                color: #f7df1e;
+            }
+
+            .react {
+                color: #61DAFB;
+            }
+
+            .wp {
+                color: #21759B;
+            }
+
+            .php {
+                color: #4F5B93;
+            }
+
+            .shopify {
+                color: #7AB55C;
+            }
+        }
+    }
 }
 
 .home-about {
     background-color: $nav-blue;
     margin-top: 2.5rem;
     padding: 2rem .25rem;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.02); /* Adjust the alpha (last value) for transparency */
+        z-index: 1; /* Ensure the overlay is behind the text */
+      }
 
     h2 {
-        color: $white;
+        color: #f0f0f0;
         text-align: center;
         font-size: 2.5rem;
         padding: 0 1rem;
+        
     }
 
     p {
         margin-top: 2rem;
         text-align: center;
         padding: 0 1rem;
-        color: $white;
+        color: #f0f0f0;
     }
 
     .principles-container {
-        figure {
-            text-align: center;
+        display: block;
+        padding: 20px;
+    }
 
-            img {
-                width: 200px;
-            }
+    .principles-container figure {
+        text-align: center;
+    }
 
-            figcaption {
-                color: $white;
-                font-size: 1.25rem;
-            }
-        }
+    .principles-container img {
+        width: 200px;
+    }
+
+    .principles-container figcaption {
+        color: $white;
+        font-size: 1.25rem;
     }
 }
 
 .featured-projects {
-    
     h2 {
         color: $blue;
         text-align: center;
         padding: 0 1rem;
         margin: 2rem 0;
     }
+
+    .btn {
+        display: block;
+        width: 10rem;
+        margin: 0 auto;
+    }
 }
 
-.btn {
-    display: block;
-    width: 13.75rem;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    background-color: #FF9500;
-    border-radius: 10px;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    text-align: center;
+@media only screen and (min-width: 768px) {
+    .landing-content {
+        display: flex;
+        height: 60vh;
+
+        .landing-text {
+            width: 50%;
+
+            h1 {
+                padding: .75rem;
+            }
+
+            .tech-stack {
+                margin-top: 3rem;
+
+                .btn {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        figure {
+            width: 50%;
+            order: 2;
+
+            img {
+                width: 20em;
+                height: 20rem;
+            }
+        }
+    }
+
+    .featured-projects-container {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .landing-content {
+        height: 80vh;
+        padding-left: 4rem;
+        padding-top: 4rem;
+
+        figure {
+            width: 40%;
+        }
+
+        .landing-text {
+            width: 60%;
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        .tech-stack > .tech-stack-icons {
+            font-size: 4rem;
+        }
+    }
+
+    .home-about {
+        
+        h2 {
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+            font-size: 4rem;
+        }
+
+        p {
+            width: 80%;
+            font-size: 2rem;
+            margin: 0 auto;
+        }
+
+        .principles-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+
+            img {
+                width: 300px;
+            }
+
+            figcaption {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .featured-projects {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+
+        h2 {
+            font-size: 3rem;
+        }        
+    }
+}
+
+/* Animation */
+@keyframes moveBorderRadius {
+    0% {
+        border-radius: 35% 40% 30% 35%;
+    }
+    100% {
+        border-radius: 40% 30% 35% 35%;
+    }
 }

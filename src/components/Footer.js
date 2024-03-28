@@ -20,8 +20,8 @@ function Footer() {
         </p>
 
         <div class="footer-buttons">
-        <Link to="/works" className="footer-btn">Email Me</Link>
-        <Link to="/works" className="footer-btn">Contact Form</Link>
+        <Link to="/works" className="btn btn-warning">Email Me</Link>
+        <Link to="/works" className="btn btn-warning">Contact Form</Link>
         </div>
 
         <div class="social-media">

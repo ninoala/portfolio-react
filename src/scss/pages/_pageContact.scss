@@ -1,0 +1,82 @@
+@use '../base/variables' as *;
+
+#contact {
+    h1 {
+        color: $nav-blue;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    p {
+        padding: 0 1rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        
+    }
+}
+
+.contact-form {
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        height: 50px; /* Adjust height as needed */
+        margin-bottom: 20px;
+        font-size: 16px; /* Adjust font size as needed */
+    }
+
+    textarea::placeholder {
+        font-size: 16px; /* Same font size as input fields */
+        font-family: $font-1;
+        font-weight: 400;
+        padding-top: .75rem;
+    }
+
+    .send-btn {
+        display: block;
+        width: 7rem;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        background-color: $orange;
+        border-radius: 10px;
+        border: none;
+        margin: 0 auto;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.contact-ctas {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 3rem;
+
+    .contacts-btn {
+        display: block;
+        width: 7rem;
+        height: 3rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: $orange;
+        border-radius: 10px;
+        border: none;
+        margin: 0 auto;
+        padding: .25rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+.leaflet-container {
+    height: 500px;
+    margin: 3rem .5rem;
+    border: 1px solid #ff8e4c;
+}
